@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "pytest-actions"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+authors = ["skhomuti <skhomuti@gmail.com>"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Framework :: Pytest" ,
+    "Topic :: Software Development :: Testing",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytest = "^7.2.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins.pytest11]
+check = "pytest_actions.plugin"
